@@ -3,16 +3,14 @@
 
 import numpy as np 
 import pandas as pd
-#import matplotlib.pyplot as plt
 import os
 import time
-#import xlrd
 
-####################### Gestion des chemins d'accès aux fichiers inputs et outputs###########
+####################### Gestion des chemins d'accès aux fichiers inputs et outputs ###########
 
 ## On asigne les chemins des répertoires d'entrée et de sortie à 2 variables
-répertoire_entrée='/Users/FrancoisBoisson 1/Desktop/WorkplaceTableau/Tableaux_inputs/Puissances Excel'
-répertoire_sortie='/Users/FrancoisBoisson 1/Desktop/WorkplaceTableau/Tableaux_outputs'
+répertoire_entrée='/Users/Desktop/Tableaux_inputs/Puissances Excel'
+répertoire_sortie='/Users/Desktop/Tableaux_outputs'
 
 ## On crée une liste de string avec les noms des fichiers présents dans le répertoire d'entrée
 fichiers = os.listdir(répertoire_entrée)
@@ -37,7 +35,7 @@ print(chemins_entrée)
 print("\nVoici les chemins de sortie: \n") 
 print(chemins_sortie) 
 
-############# Création de la colonne des temps ##############################
+##################### Création de la colonne des temps ##############################
 
 ## On crée la liste de 144 valeurs, entiers de 0 à 86400 secondes
 
@@ -89,10 +87,6 @@ print("C'est terminé,",len(chemins_sortie), " fichiers xlsx ont été convertis
 
 
 
-#workbook = xlrd.open_workbook(chemins_sortie[-1])
-
-
-
 #writer = pd.ExcelWriter(b, engine = 'xlsxwriter')
 
 '''
@@ -116,8 +110,6 @@ print(time_Enedis)
 #n = len(tableau_Sortie)
 #m=len(tableau_Sortie[0])
 #tableau_Sortie = [[tableau_Sortie[j][i] for j in range(n)] for i in range(m)]
-
-
 
 j=0
 while j < len(puissance_KEP):
